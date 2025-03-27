@@ -14,6 +14,8 @@ app.set('views', './views');
 app.use(express.static('public'));
 app.use(userRoutes);
 
+
+
 app.listen(PORT, ()=>{
     console.log(`Connected on port: ${PORT}`);
 });
