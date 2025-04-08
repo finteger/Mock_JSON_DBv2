@@ -13,6 +13,8 @@ async function createUser(req, res){
         //ternary operator
         const nextId = lastUser ? lastUser.id + 1 : 1;
 
+        console.log(req.body);
+
         //create a new user object 
         const newUser = {
             id: nextId,
