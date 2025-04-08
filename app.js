@@ -15,10 +15,11 @@ app.set('view engine','ejs');
 app.set('views', './views');
 
 //Middleware to serve static files
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.use(fixedWindowRateLimit);
 app.use(userRoutes);
-
 
 
 
