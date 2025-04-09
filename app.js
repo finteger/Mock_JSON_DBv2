@@ -6,7 +6,7 @@ const PORT = process.env.PORT;
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://toddn:<db_password>@cluster0.ksykd2u.mongodb.net/';
+const uri = process.env.MONGO_URI;
 const YAML = require('yamljs');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = YAML.load('./swagger.yaml');
@@ -32,7 +32,12 @@ app.use(fixedWindowRateLimit);
 app.use(userRoutes);
 
 
+mongoose.connect(uri).then(
+    async () =>{
+        console.log('Connected to MongoDB Server');
 
-app.listen(PORT, '0.0.0.0', ()=>{
-    console.log(`Connected on port: ${PORT}`);
-});
+        app.listen(PORT, '0.0.0.0', ()=>{
+            console.log(`Connected on port: ${PORT}`);
+        });
+    }
+).catch((err) => { console.log(`Error: ${err}`)});
