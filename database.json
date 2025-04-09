@@ -17,6 +17,12 @@
       "username": "asdf",
       "first_name": "awerasdf",
       "email": "ToddExample@gmail.com"
+    },
+    {
+      "id": 5,
+      "username": "Santa",
+      "first_name": "Santa",
+      "email": "santa@gmail.com"
     }
   ]
 }

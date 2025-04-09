@@ -6,6 +6,7 @@ const PORT = process.env.PORT;
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
 const mongoose = require('mongoose');
+const uri = 'mongodb+srv://toddn:<db_password>@cluster0.ksykd2u.mongodb.net/';
 const YAML = require('yamljs');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = YAML.load('./swagger.yaml');
