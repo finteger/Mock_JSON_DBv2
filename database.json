@@ -13,15 +13,9 @@
       "email": "bobssemail@gmail.com"
     },
     {
-      "id": 3,
-      "username": "Todd",
-      "first_name": "Todd",
-      "email": "ToddExample@gmail.com"
-    },
-    {
       "id": 4,
-      "username": "Todd",
-      "first_name": "Todd",
+      "username": "asdf",
+      "first_name": "awerasdf",
       "email": "ToddExample@gmail.com"
     }
   ]
